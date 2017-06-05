@@ -10,6 +10,7 @@ dependencies:
 - flake8
 - cython
 - pandas
+- xlrd
 - numba
 - seaborn
 - jupyter
