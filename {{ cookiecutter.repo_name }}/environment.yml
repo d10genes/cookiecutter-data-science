@@ -54,6 +54,7 @@ dependencies:
   # - pyflux
 
   # MISC
+  - fire
   # - parsec
   # - "ipython[notebook]<4"
   # - snakeviz
