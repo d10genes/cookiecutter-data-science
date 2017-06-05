@@ -60,4 +60,5 @@ dependencies:
   # - fuzzywuzzy
   # - voluptuous
   # - pystan
+  - python-dotenv>=0.5.1
 # - '--process-dependency-links git+https://github.com/pymc-devs/pymc3'
