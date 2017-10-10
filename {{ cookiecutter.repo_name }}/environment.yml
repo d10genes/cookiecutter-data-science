@@ -39,6 +39,7 @@ dependencies:
   - feather-format  # export MACOSX_DEPLOYMENT_TARGET=10.10
   - line-profiler
   - jupyter_contrib_nbextensions
+  - jupyterthemes
 
   # DL
   # - keras
@@ -65,3 +66,5 @@ dependencies:
   # - pystan
   - python-dotenv>=0.5.1
 # - '--process-dependency-links git+https://github.com/pymc-devs/pymc3'
+# jupyter contrib nbextension install --user --skip-running-check
+# jt -t grade3
