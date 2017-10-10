@@ -29,7 +29,8 @@ dependencies:
 # - gensim  # =0.12.4
 
 - joblib
-- bcolz
+# - bcolz
+- fastparquet
 
 #- pymc3
 - pip:
