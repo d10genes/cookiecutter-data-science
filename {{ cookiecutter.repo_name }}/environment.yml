@@ -27,6 +27,7 @@ dependencies:
 - scikit-learn
 # - torchvision
 # - gensim  # =0.12.4
+# - pomegranate
 
 - joblib
 # - bcolz
