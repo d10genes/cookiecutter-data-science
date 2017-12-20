@@ -67,4 +67,4 @@ dependencies:
   - python-dotenv>=0.5.1
 # - '--process-dependency-links git+https://github.com/pymc-devs/pymc3'
 # jupyter contrib nbextension install --user --skip-running-check
-# jt -t grade3
+# jt -t grade3 -cellw '100%'
