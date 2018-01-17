@@ -41,6 +41,7 @@ dependencies:
   - line-profiler
   - jupyter_contrib_nbextensions
   - jupyterthemes
+  - autopep8
 
   # DL
   # - keras
