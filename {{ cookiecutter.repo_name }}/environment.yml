@@ -2,7 +2,7 @@ name: {{cookiecutter.repo_name}}
 # channels:
 #  - defaults
 #  - conda-forge
-#  - soumith
+#  - pytorch
 dependencies:
 - python=3.6
 
@@ -13,8 +13,8 @@ dependencies:
 - xlrd
 - numba
 - seaborn
-- jupyter
-- notebook < 5
+- jupyterlab
+# - notebook < 5
 
 # HTML
 - lxml
@@ -39,8 +39,8 @@ dependencies:
   - pytest
   - feather-format  # export MACOSX_DEPLOYMENT_TARGET=10.10
   - line-profiler
-  - jupyter_contrib_nbextensions
-  - jupyterthemes
+  # - jupyter_contrib_nbextensions
+  # - jupyterthemes
   - autopep8
 
   # DL
@@ -70,3 +70,5 @@ dependencies:
 # - '--process-dependency-links git+https://github.com/pymc-devs/pymc3'
 # jupyter contrib nbextension install --user --skip-running-check
 # jt -t grade3 -cellw '100%'
+
+# jupyter labextension install jupyterlab-toc jupyterlab_vim @jupyterlab/vega3-extension
