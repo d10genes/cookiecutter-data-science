@@ -33,6 +33,8 @@ dependencies:
 - joblib
 # - bcolz
 - fastparquet
+- dask
+- python-snappy
 
 #- pymc3
 - pip:
