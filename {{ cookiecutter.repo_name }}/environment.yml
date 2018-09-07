@@ -35,6 +35,7 @@ dependencies:
 - fastparquet
 - dask
 - python-snappy
+- altair
 
 #- pymc3
 - pip:
@@ -45,6 +46,9 @@ dependencies:
   # - jupyter_contrib_nbextensions
   # - jupyterthemes
   - autopep8
+  - plotnine
+  - black
+  - pylint
 
   # DL
   # - keras
@@ -70,7 +74,7 @@ dependencies:
   # - voluptuous
   # - pystan
   - python-dotenv>=0.5.1
-# - '--process-dependency-links git+https://github.com/pymc-devs/pymc3'
+# - 'git+https://github.com/pymc-devs/pymc3'
 # jupyter contrib nbextension install --user --skip-running-check
 # jt -t grade3 -cellw '100%'
 
