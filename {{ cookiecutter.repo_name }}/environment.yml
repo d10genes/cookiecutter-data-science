@@ -35,7 +35,10 @@ dependencies:
 - fastparquet
 - dask
 - python-snappy
+
+# New
 - altair
+
 
 #- pymc3
 - pip:
@@ -46,9 +49,7 @@ dependencies:
   # - jupyter_contrib_nbextensions
   # - jupyterthemes
   - autopep8
-  - plotnine
-  - black
-  - pylint
+  - sqlitedict
 
   # DL
   # - keras
@@ -72,10 +73,14 @@ dependencies:
   # - pygraphviz
   # - fuzzywuzzy
   # - voluptuous
-  # - pystan
+  - pystan
   - python-dotenv>=0.5.1
-# - 'git+https://github.com/pymc-devs/pymc3'
+  # new
+  - plotnine
 # jupyter contrib nbextension install --user --skip-running-check
 # jt -t grade3 -cellw '100%'
 
 # jupyter labextension install jupyterlab-toc jupyterlab_vim @jupyterlab/vega3-extension
+
+# jupyter labextension install @jupyterlab/toc
+# jupyter labextension install jupyterlab_vim @jupyterlab/vega3-extension
