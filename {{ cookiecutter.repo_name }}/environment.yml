@@ -39,17 +39,20 @@ dependencies:
 # New
 - altair
 
-
 #- pymc3
 - pip:
-  - toolz
-  - pytest
-  - feather-format  # export MACOSX_DEPLOYMENT_TARGET=10.10
-  - line-profiler
-  # - jupyter_contrib_nbextensions
-  # - jupyterthemes
   - autopep8
+  - black
+  - feather-format
+  - flake8-mypy
+  - jupyter_nbextensions_configurator
+  - jupytext
+  - line-profiler
+  - plotnine
+  - pylint
+  - pytest
   - sqlitedict
+  - toolz
 
   # DL
   # - keras
@@ -73,6 +76,7 @@ dependencies:
   # - pygraphviz
   # - fuzzywuzzy
   # - voluptuous
+  - arviz
   - pystan
   - python-dotenv>=0.5.1
   # new
