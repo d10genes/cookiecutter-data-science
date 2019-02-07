@@ -17,3 +17,12 @@ def add_path(*ps, pos=0):
     for p in ps:
         add_path_(p, pos=pos)
     return len(sys.path)
+
+
+def run_magics():
+    args = ['matplotlib inline',
+            'autocall 1',
+            'load_ext autoreload',
+            'autoreload 2']
+    for arg in args:
+        get_ipython().magic(arg)
