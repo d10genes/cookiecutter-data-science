@@ -18,7 +18,7 @@ import fastparquet
 
 from functools import wraps, partial, reduce, lru_cache
 import operator as op
-from operator import itemgetter as itg, attrgetter as prop
+from operator import itemgetter as sel, attrgetter as prop
 
 from glob import glob
 import re, sys, os, time
