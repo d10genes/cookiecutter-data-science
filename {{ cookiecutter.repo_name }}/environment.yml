@@ -47,7 +47,8 @@ dependencies:
   - flake8-mypy
   - jupyter_nbextensions_configurator
   - jupytext
-  - line-profiler
+  # - line-profiler  # doesn't work w/ 3.7
+  - jupyterlab_code_formatter
   - plotnine
   - pylint
   - pytest
@@ -84,7 +85,8 @@ dependencies:
 # jupyter contrib nbextension install --user --skip-running-check
 # jt -t grade3 -cellw '100%'
 
-# jupyter labextension install jupyterlab-toc jupyterlab_vim @jupyterlab/vega3-extension
+# jupyter labextension install jupyterlab_vim @jupyterlab/toc @ryantam626/jupyterlab_code_formatter
+
 
 # jupyter labextension install @jupyterlab/toc
 # jupyter labextension install jupyterlab_vim @jupyterlab/vega3-extension
