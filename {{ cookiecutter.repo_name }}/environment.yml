@@ -82,6 +82,12 @@ dependencies:
   - python-dotenv>=0.5.1
   # new
   - plotnine
+  - probscale
+
+  # Data
+  - google-cloud-bigquery
+  - pandas-gbq
+
 # jupyter contrib nbextension install --user --skip-running-check
 # jt -t grade3 -cellw '100%'
 

@@ -41,10 +41,9 @@ sns.set_palette('colorblind')
 from joblib import Memory
 mem = Memory(cachedir='cache', verbose=0)
 
-# import tsutils.stan_utility_betan as stan_utility
-# from sub_utils import eda_utes as eu; reload(eu)
-# import tsutils.mutes as mt; from tsutils import lrn_utes as lu; reload(lu)
+# Myutils
 import myutils as mu; reload(mu)
+import mystan as ms
 import pandas_utils as pu; import pandas_utils3 as p3;
 from faster_pandas import MyPandas as fp
 ap = mu.dmap
