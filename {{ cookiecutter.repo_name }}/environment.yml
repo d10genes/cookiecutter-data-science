@@ -29,6 +29,7 @@ dependencies:
 # - torchvision
 # - gensim  # =0.12.4
 # - pomegranate
+- pystan
 
 - joblib
 # - bcolz
@@ -78,7 +79,6 @@ dependencies:
   # - fuzzywuzzy
   # - voluptuous
   - arviz
-  - pystan
   - python-dotenv>=0.5.1
   # new
   - plotnine
