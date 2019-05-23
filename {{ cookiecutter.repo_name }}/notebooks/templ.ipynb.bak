@@ -23,7 +23,7 @@
     "A.data_transformers.enable('json', prefix='data/altair-data')\n",
     "S = Series; D = DataFrame\n",
     "\n",
-    "from big_query import read_gbq\n",
+    "from big_query import bq_read\n",
     "from pyspark_utils import C, spark, sql\n",
     "\n",
     "import warnings\n",
