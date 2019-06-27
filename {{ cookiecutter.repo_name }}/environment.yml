@@ -12,6 +12,8 @@ dependencies:
 - pandas
 - xlrd
 - numba
+- scipy < 1.3.0
+# https://github.com/statsmodels/statsmodels/issues/5747
 - seaborn
 - jupyterlab
 - simplejson
@@ -39,7 +41,7 @@ dependencies:
 
 # New
 - altair
-
+- pip
 #- pymc3
 - pip:
   - autopep8
