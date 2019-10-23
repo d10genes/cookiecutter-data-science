@@ -3,3 +3,10 @@ docs/site/
 # OSX Junk
 .DS_Store
 .mypy_cache/
+
+
+/data/
+!/data/*.py
+notebooks/data/
+notebooks/cache/
+altair/

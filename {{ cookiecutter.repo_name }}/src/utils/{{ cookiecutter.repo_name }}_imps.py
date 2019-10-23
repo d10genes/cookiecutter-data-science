@@ -10,7 +10,6 @@ import seaborn as sns
 import numpy as np; import numpy.random as nr; import scipy as sp
 import pandas as pd
 from pandas import DataFrame, Series
-from pandas.compat import lmap, lrange, lfilter
 from pandas.testing import assert_frame_equal, assert_series_equal
 import toolz.curried as z
 from numba import njit
@@ -85,3 +84,7 @@ Path.g = lambda self, *x: list(self.glob(*x))
 
 pd.options.display.width = 220
 A.data_transformers.enable('json', prefix='altair/altair-data')
+
+lrange = z.compose(list, range)
+lmap = z.compose(list, map)
+lfilter = z.compose(list, filter)

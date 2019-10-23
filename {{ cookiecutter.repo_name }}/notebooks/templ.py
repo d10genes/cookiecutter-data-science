@@ -28,7 +28,6 @@ A.data_transformers.enable('json', prefix='data/altair-data')
 S = Series; D = DataFrame
 
 from big_query import bq_read
-from pyspark_utils import C, spark, sql
 
 import warnings
 from matplotlib import MatplotlibDeprecationWarning
