@@ -1,7 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
-#     formats: ipynb,py:percent
+#     formats: ipynb,scripts//py:percent
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -16,8 +16,13 @@
 # %% [markdown]
 # This notebook ("") tries to download all recent experiments via dbx
 
+import warnings
+
+from big_query import bq_read
 # %%
-from boot_utes import (reload, add_path, path, run_magics)
+from boot_utes import add_path, path, reload, run_magics
+from matplotlib import MatplotlibDeprecationWarning
+
 add_path('..', '../src/', '~/repos/myutils/', )
 
 from utils.{{ cookiecutter.repo_name }}_imps import *; exec(pu.DFCols_str); exec(pu.qexpr_str); run_magics()
@@ -27,10 +32,7 @@ sns.set_style('whitegrid')
 A.data_transformers.enable('json', prefix='data/altair-data')
 S = Series; D = DataFrame
 
-from big_query import bq_read
 
-import warnings
-from matplotlib import MatplotlibDeprecationWarning
 warnings.filterwarnings("ignore", category=MatplotlibDeprecationWarning)
 
 # %%
