@@ -57,6 +57,7 @@ dependencies:
   - jupytext
   - jupyterlab_code_formatter
   # - line-profiler  # doesn't work w/ 3.7
+  # https://github.com/rkern/line_profiler/issues/132
 
   # HTML
   - requests_cache

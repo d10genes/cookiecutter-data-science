@@ -29,6 +29,7 @@ import pandas_utils as pu
 import pandas_utils3 as p3
 import plotnine as p9
 import scipy as sp
+import scipy.stats as sts
 import seaborn as sns
 # !pip install simplejson
 import simplejson
