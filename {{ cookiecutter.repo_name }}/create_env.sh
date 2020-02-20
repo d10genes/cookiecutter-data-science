@@ -1,4 +1,5 @@
 set -euo pipefail
+source ~/miniconda3/etc/profile.d/conda.sh
 
 conda env create -f environment.yml
 
