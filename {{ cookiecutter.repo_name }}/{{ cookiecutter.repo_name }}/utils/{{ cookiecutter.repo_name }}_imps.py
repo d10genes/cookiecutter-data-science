@@ -17,8 +17,9 @@ from os.path import *
 from pathlib import Path
 
 import altair as A
-import dask
-import dask.dataframe as dd
+
+# import dask
+# import dask.dataframe as dd
 import fastparquet
 import matplotlib.pyplot as plt
 import mystan as ms
@@ -31,6 +32,7 @@ import plotnine as p9
 import scipy as sp
 import scipy.stats as sts
 import seaborn as sns
+
 # !pip install simplejson
 import simplejson
 import toolz.curried as z
@@ -51,37 +53,44 @@ from sklearn.tree import DecisionTreeClassifier, export_graphviz
 
 ss = lambda x: StandardScaler().fit_transform(x.values[:, None]).ravel()
 
-sns.set_palette('colorblind')
-mem = Memory(cachedir='cache', verbose=0)
+sns.set_palette("colorblind")
+mem = Memory(cachedir="cache", verbose=0)
 
 # Myutils
-import myutils as mu; reload(mu)
+import myutils as mu
+
+reload(mu)
 
 ap = mu.dmap
 
-dd.DataFrame.q = lambda self, q, local_dict={}, **kw: self.query(q, local_dict=z.merge(local_dict, kw))
+dd.DataFrame.q = lambda self, q, local_dict={}, **kw: self.query(
+    q, local_dict=z.merge(local_dict, kw)
+)
 
 
 vc = z.compose(Series, Counter)
 
 
-
-def mk_geom(p9, pref='geom_'):
+def mk_geom(p9, pref="geom_"):
     geoms = [c for c in dir(p9) if c.startswith(pref)]
     geom = lambda: None
-    geom.__dict__.update({name[len(pref):]: getattr(p9, name) for name in geoms})
+    geom.__dict__.update(
+        {name[len(pref) :]: getattr(p9, name) for name in geoms}
+    )
     return geom
 
 
-geom = mk_geom(p9, pref='geom_')
-facet = mk_geom(p9, pref='facet_')
+geom = mk_geom(p9, pref="geom_")
+facet = mk_geom(p9, pref="facet_")
 
 
 def run_magics():
-    args = ['matplotlib inline',
-            'autocall 1',
-            'load_ext autoreload',
-            'autoreload 2']
+    args = [
+        "matplotlib inline",
+        "autocall 1",
+        "load_ext autoreload",
+        "autoreload 2",
+    ]
     for arg in args:
         get_ipython().magic(arg)
 
@@ -92,8 +101,42 @@ Path.g = lambda self, *x: list(self.glob(*x))
 pd.options.display.width = 220
 pd.options.display.min_rows = 40
 
-A.data_transformers.enable('json', prefix='altair/altair-data')
+A.data_transformers.enable("json", prefix="altair/altair-data")
 
 lrange = z.compose(list, range)
 lmap = z.compose(list, map)
 lfilter = z.compose(list, filter)
+
+
+def read(fn, mode="r"):
+    with open(fn, mode) as fp:
+        txt = fp.read()
+    return txt
+
+
+@mem.cache
+def bq_read_cache(*a, **k):
+    return bq_read(*a, **k)
+
+
+os = lambda: None
+os.__dict__.update(dict(m="Mac OS X", w="Windows NT", l="Linux"))
+
+
+def counts2_8020(cts, thresh=.9):
+    """
+    MOVE TO MYUTILS AT SOME POINT
+    Find out n, where the top n elems account for `thresh`% of
+    the counts.
+    """
+    cts = cts.sort_values(ascending=False)
+    cs = cts.cumsum().pipe(lambda x: x / x.max())
+    loc = cs.searchsorted(thresh)
+    pct = loc / len(cs)
+    ct_val = cts.iloc[loc]
+    print(
+        "Largest {:.1%} elems account for {:.1%} of counts (val == {})".format(
+            pct, thresh, ct_val
+        )
+    )
+    return dict(cdf_x=thresh, cdf_y=pct, val=ct_val, nth=loc)
