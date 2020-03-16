@@ -58,14 +58,12 @@ mem = Memory(cachedir="cache", verbose=0)
 
 # Myutils
 import myutils as mu
+from big_query import bq_read
+
 
 reload(mu)
 
 ap = mu.dmap
-
-dd.DataFrame.q = lambda self, q, local_dict={}, **kw: self.query(
-    q, local_dict=z.merge(local_dict, kw)
-)
 
 
 vc = z.compose(Series, Counter)
@@ -100,6 +98,7 @@ Path.g = lambda self, *x: list(self.glob(*x))
 
 pd.options.display.width = 220
 pd.options.display.min_rows = 40
+pd.options.display.max_columns = 30
 
 A.data_transformers.enable("json", prefix="altair/altair-data")
 

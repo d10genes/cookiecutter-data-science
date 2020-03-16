@@ -16,6 +16,7 @@ dependencies:
 # https://github.com/statsmodels/statsmodels/issues/5747
 - seaborn
 - jupyterlab
+# Until this is fixed https://github.com/jwkvam/jupyterlab-vim/pull/115
 - simplejson
 # - notebook < 5
 
@@ -80,6 +81,7 @@ dependencies:
   - plotnine
   - probscale
   - feather-format
+  - tqdm
 
   # Data
   - google-cloud-bigquery
