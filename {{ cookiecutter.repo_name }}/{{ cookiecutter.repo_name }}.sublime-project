@@ -1,0 +1,39 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"/Users/wbeard/miniconda3/envs/{{ cookiecutter.repo_name }}/bin/python\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"SublimeLinter.linters.mypy.env":
+		{
+			"MYPYPATH": "${project_path}/src"
+		},
+		"SublimeLinter.linters.mypy.executable": "/Users/wbeard/miniconda3/envs/{{cookiecutter.repo_name}}/bin/mypy",
+		"anaconda_linting": false,
+		"anaconda_linting_behaviour": "always",
+		"pep257": false,
+		"pep8_ignore":
+		[
+			"W503",
+			"E731",
+			"E501",
+			"E741"
+		],
+		"python_interpreter": "/Users/wbeard/miniconda3/envs/{{ cookiecutter.repo_name }}/bin/python",
+		"test_command": "python -m unittest discover",
+		"use_pylint": false,
+		"validate_imports": true
+	}
+}
