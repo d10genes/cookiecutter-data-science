@@ -11,3 +11,7 @@ jupyter lab build --name='{{cookiecutter.repo_name}}'
 cd notebooks
 jupytext --to ipynb templ.py
 cd ..
+
+# jupyter labextension list
+# pip install "jupyterlab_code_formatter==1.x.x"
+# jupyter serverextension enable --py jupyterlab_code_formatter --sys-prefix

@@ -54,7 +54,7 @@ from sklearn.tree import DecisionTreeClassifier, export_graphviz
 ss = lambda x: StandardScaler().fit_transform(x.values[:, None]).ravel()
 
 sns.set_palette("colorblind")
-mem = Memory(cachedir="cache", verbose=0)
+mem = Memory(location="cache", verbose=0)
 
 # Myutils
 import myutils as mu
