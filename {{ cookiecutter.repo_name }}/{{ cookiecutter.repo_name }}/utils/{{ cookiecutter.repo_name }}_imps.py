@@ -118,8 +118,8 @@ def bq_read_cache(*a, **k):
     return bq_read(*a, **k)
 
 
-os = lambda: None
-os.__dict__.update(dict(m="Mac OS X", w="Windows NT", l="Linux"))
+oss = lambda: None
+oss.__dict__.update(dict(m="Mac OS X", w="Windows NT", l="Linux"))
 
 
 def counts2_8020(cts, thresh=.9):

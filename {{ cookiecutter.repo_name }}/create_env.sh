@@ -3,9 +3,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 
 conda env create -f environment.yml
 
-source activate {{cookiecutter.repo_name}}
+conda activate {{cookiecutter.repo_name}}
 
-jupyter labextension install jupyterlab_vim @jupyterlab/toc @ryantam626/jupyterlab_code_formatter
+jupyter labextension install @axlair/jupyterlab_vim @jupyterlab/toc @ryantam626/jupyterlab_code_formatter
 jupyter lab build --name='{{cookiecutter.repo_name}}'
 
 cd notebooks

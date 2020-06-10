@@ -35,7 +35,6 @@ dependencies:
 - pystan
 
 - joblib
-# - bcolz
 - fastparquet
 - dask
 - python-snappy
