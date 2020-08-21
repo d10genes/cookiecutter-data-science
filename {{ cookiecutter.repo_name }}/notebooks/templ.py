@@ -32,20 +32,10 @@ A.data_transformers.enable("json", prefix="data/altair-data")
 S = Series
 D = DataFrame
 # %%
-
-def pipe(h, f):
-    return f(h)
-
-A.Chart.pipe = pipe
-
-def add_point(h):
-    return h + h.mark_point()
-
-def add_line(h):
-    return h + h.mark_line()
-
-nz = A.Scale(zero=False)
-lgs = A.Scale(type="log", zero=False)
+import dscontrib.wbeard as dw
+from dscontrib.wbeard import altair_utils as aau
+DataFrame.pat = aau.pat
+aau.set_ds(A)
 
 # %% [markdown]
 # # Load

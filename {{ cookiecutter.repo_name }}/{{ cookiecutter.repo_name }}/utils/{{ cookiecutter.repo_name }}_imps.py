@@ -139,3 +139,6 @@ def counts2_8020(cts, thresh=.9):
         )
     )
     return dict(cdf_x=thresh, cdf_y=pct, val=ct_val, nth=loc)
+
+
+mu.set_import_name(mu)

@@ -18,7 +18,7 @@
 	{
 		"SublimeLinter.linters.mypy.env":
 		{
-			"MYPYPATH": "${project_path}/src"
+			"MYPYPATH": "${project_path}/{{ cookiecutter.repo_name }}"
 		},
 		"SublimeLinter.linters.mypy.executable": "/Users/wbeard/miniconda3/envs/{{cookiecutter.repo_name}}/bin/mypy",
 		"anaconda_linting": false,
